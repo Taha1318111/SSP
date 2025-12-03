@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>CA Portal | Responsive CA Website Theme Design Portal in India</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/responsiveslides/1.55/responsiveslides.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Swiper Slider CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+        body { margin: 0; padding: 0; font-family: 'Lato', sans-serif !important; }
+        html { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5; color: #545454; }
+        
+        /* Top Bar Styles */
+        #topbar { background: #f8f9fa; padding: 10px 0; font-size: 14px; }
+        .contact-info { color: #333; }
+        .social-lnks { text-align: right; color: #666; }
+        
+        /* Header Styles */
+        #header { background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .navbar { margin: 0; }
+        .navbar-brand img { height: 50px; }
+        .navbar-nav > li > a { color: #333; padding: 15px 20px; }
+        .navbar-nav > li > a:hover { color: #06a4f2; }
+        
+        /* Slider Styles */
+        .flexslider { position: relative; height: 600px; overflow: hidden; }
+        .slider-img img { width: 100%; height: 600px; object-fit: cover; }
+        .banner-cont { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff; text-align: center; background: rgba(0,0,0,0.5); padding: 40px; border-radius: 10px; }
+        .banner-cont h3 { font-size: 3em; margin-bottom: 10px; }
+        .banner-cont h3 span { color: #06a4f2; }
+        .banner-cont p { font-size: 1.2em; margin-bottom: 20px; }
+        .btn-menu, .btn-book { display: inline-block; padding: 12px 30px; margin: 10px; border: none; border-radius: 5px; text-decoration: none; color: #fff; font-weight: bold; }
+        .btn-menu { background: #06a4f2; }
+        .btn-book { background: #82b440; }
+        
+        /* About Section */
+        #about { padding: 80px 0; background: #f8f9fa; }
+        .sub_heading { color: #06a4f2; font-size: 1.2em; margin-bottom: 10px; }
+        .main_heading { font-size: 2.5em; color: #333; margin-bottom: 40px; }
+        
+        /* Why Us Section */
+        .why-us { padding: 80px 0; }
+        .section-box-eleven { text-align: center; margin-bottom: 30px; }
+        .section-box-eleven figure { position: relative; overflow: hidden; }
+        .section-box-eleven img { width: 100%; height: 250px; object-fit: cover; }
+        .title { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: #fff; padding: 20px; }
+        .icon-img { font-size: 2em; color: #06a4f2; margin-right: 10px; }
+        
+        /* Services Section */
+        .service { padding: 80px 0; background: #f8f9fa; }
+        .sub-heading-1 { color: #06a4f2; font-size: 1.2em; margin-bottom: 10px; }
+        .grid { margin-bottom: 30px; }
+        .grid figure { position: relative; overflow: hidden; }
+        .grid img { width: 100%; height: 250px; object-fit: cover; }
+        .grid figcaption { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.7); color: #fff; opacity: 0; transition: opacity 0.3s; display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px; }
+        .grid:hover figcaption { opacity: 1; }
+        .ser-cont h2 { font-size: 1.8em; margin-bottom: 10px; }
+        
+        /* Contact Section */
+        #contact { padding: 80px 0; }
+        .cont-form { background: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
+        .form-control { border: 1px solid #ddd; border-radius: 5px; padding: 12px; margin-bottom: 20px; }
+        .form-control:focus { border-color: #06a4f2; }
+        button[type="submit"] { background: #06a4f2; color: #fff; padding: 12px 30px; border: none; border-radius: 5px; font-weight: bold; }
+        
+        /* Footer Styles */
+        footer { background: #333; color: #fff; padding: 50px 0 20px; }
+        .footer-top { border-bottom: 1px solid #555; padding-bottom: 40px; margin-bottom: 40px; }
+        .footer-contact h2 { font-size: 2em; margin-bottom: 20px; }
+        .footer-contact p { margin-bottom: 10px; }
+        .social-links a { color: #fff; font-size: 1.5em; margin: 0 10px; }
+        .footer-links h4 { margin-bottom: 20px; }
+        .footer-links ul li { list-style: none; margin-bottom: 10px; }
+        .footer-links ul li a { color: #ccc; text-decoration: none; }
+        .footer-links ul li a:hover { color: #06a4f2; }
+        .copyright { text-align: center; padding: 20px 0; border-top: 1px solid #555; color: #ccc; }
+        
+        /* Top Scroll Button */
+        .top { position: fixed; bottom: 20px; right: 20px; background: #06a4f2; color: #fff; width: 50px; height: 50px; border-radius: 50%; text-align: center; line-height: 50px; cursor: pointer; display: none; z-index: 1000; transition: opacity 0.3s; }
+        .top.show { display: block; }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .banner-cont h3 { font-size: 2em; }
+            .flexslider { height: 400px; }
+            .slider-img img { height: 400px; }
+            .main_heading { font-size: 2em; }
+        }
+    </style>
+</head><header class="fixed top-0 left-0 w-full bg-white shadow z-50">
+  <nav class="max-w-screen-xl mx-auto flex items-center justify-between p-4">
+    <!-- Logo -->
+    <h1 class="text-2xl font-bold text-gray-800">SSP Consultancy</h1>
+
+    <!-- Mobile menu button -->
+    <button id="menuBtn" class="md:hidden text-3xl text-gray-700 focus:outline-none">☰</button>
+
+    <!-- Menu Items -->
+    <ul id="menuList" class="hidden md:flex md:items-center md:space-x-8 w-full md:w-auto bg-white md:bg-transparent absolute md:static left-0 top-full md:top-auto shadow-md md:shadow-none transition-all duration-300">
+      <li><a href="#home" class="block px-6 py-3 text-gray-700 hover:text-blue-600">Home</a></li>
+      <li><a href="#about" class="block px-6 py-3 text-gray-700 hover:text-blue-600">About</a></li>
+      <li><a href="#services" class="block px-6 py-3 text-gray-700 hover:text-blue-600">Services</a></li>
+      <li><a href="#contact" class="block px-6 py-3 text-gray-700 hover:text-blue-600">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<!-- Slider Start -->
+<div class="swiper mySlider h-[600px] relative">
+
+    <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide relative">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvdniyzGU-8kgXfaykOQl_SlGCNvaZKqKbOg&s"
+                class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white text-center px-6">
+                <h3 class="text-4xl font-bold">Audit <span class="text-blue-400">Services</span></h3>
+                <p class="max-w-2xl mt-4">Indepth study of existing systems, procedures and controls for proper understanding. Suggestions for improvement and strengthening.</p>
+                <div class="mt-6 flex gap-4">
+                    <a href="#services" class="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded text-white">Read More</a>
+                    <a href="#contact" class="bg-green-600 hover:bg-green-700 px-6 py-3 rounded text-white">Contact Us</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide relative">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvdniyzGU-8kgXfaykOQl_SlGCNvaZKqKbOg&s"
+                class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white text-center px-6">
+                <h3 class="text-4xl font-bold">Accounting <span class="text-blue-400">Services</span></h3>
+                <p class="max-w-2xl mt-4">Accounting System Design & Implementation. Financial Accounting. Budgeting. MIS Reports.</p>
+                <div class="mt-6 flex gap-4">
+                    <a href="#services" class="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded text-white">Read More</a>
+                    <a href="#contact" class="bg-green-600 hover:bg-green-700 px-6 py-3 rounded text-white">Contact Us</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide relative">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvdniyzGU-8kgXfaykOQl_SlGCNvaZKqKbOg&s"
+                class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white text-center px-6">
+                <h3 class="text-4xl font-bold">Corporate <span class="text-blue-400">Services</span></h3>
+                <p class="max-w-2xl mt-4">Incorporation of company, consultancy on company law matters, mergers & acquisitions.</p>
+                <div class="mt-6 flex gap-4">
+                    <a href="#services" class="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded text-white">Read More</a>
+                    <a href="#contact" class="bg-green-600 hover:bg-green-700 px-6 py-3 rounded text-white">Contact Us</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Navigation -->
+    <div class="swiper-button-next text-white"></div>
+    <div class="swiper-button-prev text-white"></div>
+
+    <!-- Pagination Dots -->
+    <div class="swiper-pagination"></div>
+
+</div>
+<!-- Slider End -->
+
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container aos-init" data-aos="fade-up">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h3 class="sub_heading">Our Company</h3>
+                    <h2 class="main_heading">About Us</h2>
+                </div>
+                <div class="col-md-8">
+                    <p><strong>Chartered Accountants</strong> was established in the year 2001. It is a leading chartered accountancy firm rendering comprehensive professional services which include Audit, Management Consultancy, Tax Consultancy, Accounting Services, Manpower Management, Secretarial Services etc.</p>
+                    <p><strong>Chartered Accountants</strong> is a professionally managed firm. The team consists of distinguished Chartered Accountants, Corporate Financial Advisors and Tax Consultants. The firm represents a combination of specialized skills, which are geared to offers sound financial advice and personalized proactive services. Those associated with the firm have regular interaction with industry and other professionals which enables the firm to keep pace with contemporary developments and to meet the needs of its clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Why Us Section -->
+<section id="why-us" class="bg-gray-50 py-16">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-gray-800">Why Us</h2>
+      <p class="text-gray-600 mt-2">Discover what makes us unique and reliable for your business needs.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- What's New -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+        <div class="relative">
+          <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0" alt="What's New" class="w-full h-64 object-cover">
+          <div class="absolute bottom-0 left-0 p-6 bg-gradient-to-t from-black/70 to-transparent w-full text-white">
+            <div class="flex items-center mb-2">
+              <i class="fa fa-bullhorn mr-2 text-xl"></i>
+              <h5 class="text-lg font-semibold">What's New</h5>
+            </div>
+            <a href="#" class="text-sm font-medium underline">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event Calendar -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+        <div class="relative">
+          <img src="https://images.unsplash.com/photo-1626178793926-22b28830aa30?w=500&auto=format&fit=crop&q=60" alt="Event Calendar" class="w-full h-64 object-cover">
+          <div class="absolute bottom-0 left-0 p-6 bg-gradient-to-t from-black/70 to-transparent w-full text-white">
+            <div class="flex items-center mb-2">
+              <i class="fa fa-calendar mr-2 text-xl"></i>
+              <h5 class="text-lg font-semibold">Event Calendar</h5>
+            </div>
+            <a href="#" class="text-sm font-medium underline">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Career -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+        <div class="relative">
+          <img src="https://images.unsplash.com/photo-1640197618317-dc379a226fbe?w=500&auto=format&fit=crop&q=60" alt="Career" class="w-full h-64 object-cover">
+          <div class="absolute bottom-0 left-0 p-6 bg-gradient-to-t from-black/70 to-transparent w-full text-white">
+            <div class="flex items-center mb-2">
+              <i class="fa fa-suitcase mr-2 text-xl"></i>
+              <h5 class="text-lg font-semibold">Career</h5>
+            </div>
+            <a href="#" class="text-sm font-medium underline">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Services Section -->
+ <!-- Services Section -->
+<section id="services" class="bg-gray-100 py-16">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h3 class="text-blue-500 uppercase mb-2">What We Do</h3>
+      <h2 class="text-4xl font-bold text-gray-800">Services</h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Audit Services -->
+      <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+        <img src="https://plus.unsplash.com/premium_photo-1675242132036-36da2715b88e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGZpbmFuY2V8ZW58MHx8MHx8fDA%3D" alt="Audit Services" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Audit Services</h3>
+          <p class="text-gray-600">In-depth study of existing systems, procedures and controls for proper understanding. Suggestions for improvement and strengthening.</p>
+        </div>
+      </div>
+
+      <!-- Income Tax -->
+      <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1620266757065-5814239881fd?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Income Tax Services" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Income Tax</h3>
+          <p class="text-gray-600">Consultancy on various intricate matters pertaining to Income tax. Effective tax management, tax structuring and advisory services.</p>
+        </div>
+      </div>
+
+      <!-- Accounting Services -->
+      <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+        <img src="https://plus.unsplash.com/premium_photo-1733306583396-8621f2906a82?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Accounting Services" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Accounting Services</h3>
+          <p class="text-gray-600">Accounting System Design & Implementation. Financial Accounting. Budgeting. Financial Reporting. MIS Reports. Financial Analysis.</p>
+        </div>
+      </div>
+
+      <!-- Corporate Services -->
+      <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+        <img src="https://plus.unsplash.com/premium_photo-1677022383099-555c0bcc63e5?q=80&w=663&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Corporate Services" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Corporate Services</h3>
+          <p class="text-gray-600">Consultancy on Company Law matters. Planning for Mergers, Acquisitions, De-mergers, and Corporate reorganizations.</p>
+        </div>
+      </div>
+
+      <!-- Corporate Finance -->
+      <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Corporate Finance" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Corporate Finance</h3>
+          <p class="text-gray-600">Preparation of CMA data for bank loans. Private placement of shares, Inter-Corporate Deposit, Term loans, working capital limits, etc.</p>
+        </div>
+      </div>
+
+      <!-- GST Services -->
+      <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="GST Services" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">GST</h3>
+          <p class="text-gray-600">GST Migrations and Registrations. Filing of GST Returns (Regular Dealer, Composition Dealer, ISD, Non-Resident, E-Commerce, etc.).</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="head-section text-center">
+                <h3 class="sub-heading-1">Reach Us</h3>
+                <h2 class="main_heading">Contact Us</h2>
+            </div>
+        </div>
+        <div class="container cont-btm">
+            <div class="row mt-5">
+                <div class="col-lg-6 col-md-6 aos-init" data-aos="fade-up">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14233.271381485145!2d75.825855!3d26.893406!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2e11539d7e82aee4!2sSAG+Infotech+Pvt+Ltd!5e0!3m2!1sen!2sin!4v1508927137345" allowfullscreen="" width="100%" height="400" style="border:0;"></iframe>
+                </div>
+                <div class="col-lg-6 col-md-6 aos-init" data-aos="fade-up">
+                    <form action="#" method="post" role="form" class="cont-form">
+                        <div class="form-row row">
+                            <div class="col-md-6 form-group">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="message" rows="8" placeholder="Message" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 footer-contact wow fadeInRight">
+                        <h2>Chartered Accountants<br><span>Your Trusted Partner</span></h2>
+                        <p><i class="fa fa-map-marker"></i> B-9, Second Floor, Mahalaxmi Nagar, Behind WTP South Block, Malviya Nagar, Jaipur - 302017 (Raj.)</p>
+                        <p><i class="fa fa-phone"></i> 0141-4072000 (60 Line)</p>
+                        <div class="social-links wow zoomInDown">
+                            <h4>Follow Us on</h4>
+                            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 footer-links wow zoomIn">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><i class="fa fa-angle-right"></i> <a href="#home">Home</a></li>
+                            <li><i class="fa fa-angle-right"></i> <a href="#about">About us</a></li>
+                            <li><i class="fa fa-angle-right"></i> <a href="#services">Our Services</a></li>
+                            <li><i class="fa fa-angle-right"></i> <a href="#contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-4 footer-links wow fadeInLeft">
+                        <h4>Disclaimer</h4>
+                        <p>Your access to this website constitutes your agreement to be bound by all terms and conditions listed herein below. If you do not agree to this, you may not access or otherwise use the website.<br>
+                            The material displayed on this website may be downloaded for non-commercial, personal use only. Distribution, modification, transmission..<br>
+                            <a href="#">Read More</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 copyright wow fadeIn">© 2025 Chartered Accountants. All Rights Reserved</div>
+                <div class="col-md-6 credits wow fadeIn text-right">Design By SAG Infotech Pvt. Ltd.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Top Scroll Button -->
+    <div class="top fadeIn"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
+
+  <script src="index.js"> </script>
+</body>
+</html>
