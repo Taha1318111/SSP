@@ -70,3 +70,54 @@
     menuList.classList.toggle("hidden"); // toggles visibility on mobile
   });
 
+function sendEmail(e) {
+  e.preventDefault(); // ✅ Page reload band
+
+  let btn = document.getElementById("sendBtn");
+  let btnText = document.getElementById("btnText");
+  let btnLoader = document.getElementById("btnLoader");
+
+  // ✅ Show Loader
+  btnText.classList.add("hidden");
+  btnLoader.classList.remove("hidden");
+  btn.disabled = true;
+
+  var params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    subject: document.getElementById("subject").value, // ✅ added
+    message: document.getElementById("message").value
+  };
+
+  emailjs.send("service_xozu31d", "template_zrbny5h", params)
+    .then(function (response) {
+
+      // ✅ Hide Loader
+      btnText.classList.remove("hidden");
+      btnLoader.classList.add("hidden");
+      btn.disabled = false;
+
+      // ✅ Show Success Modal
+      document.getElementById("successModal").classList.remove("hidden");
+
+      // ✅ Reset Form
+      document.querySelector(".cont-form").reset();
+
+    }, function (error) {
+
+      // ✅ Hide Loader
+      btnText.classList.remove("hidden");
+      btnLoader.classList.add("hidden");
+      btn.disabled = false;
+
+      // ❌ Show Error Modal
+      document.getElementById("errorModal").classList.remove("hidden");
+
+      console.log("ERROR:", error);
+    });
+}
+
+function closeModal() {
+  document.getElementById("successModal").classList.add("hidden");
+  document.getElementById("errorModal").classList.add("hidden");
+}
